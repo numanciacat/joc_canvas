@@ -26,7 +26,7 @@ $(document).on('deviceready',
 	
 	function offline()
 	{
-		alert("offline")
+		alert("offline");
 		
 	}
 	
@@ -38,7 +38,7 @@ $(document).on('deviceready',
 			clickY[i] = event.touches[i].pageY;
 		}
 		//dibuixar triangle a X:Y
-	triangle(clickX[i],clickY[i])
+	triangle(clickX[i],clickY[i]);
 	}
 	
 	function movetouch(event)
@@ -49,7 +49,7 @@ $(document).on('deviceready',
 			clickY[i] = event.touches[i].pageY;
 		}
 		//moure triangle a X:Y
-		triangle(clickX[i],clickY[i])
+		triangle(clickX[i],clickY[i]);
 	}
 	
 	function triangle(eixx,eixy)
@@ -71,7 +71,7 @@ $(document).on('deviceready',
 				img.src = 'img/myImage.png';
 				for (i = 0; i < 20; i++)
 				{
-					pausecomp(200);
+					sleep(200);
 					ctx.clearRect(posicio_x_bola,posicio_y_bola,mida_x_bola,mida_y_bola );
 					ctx.drawImage(img,posicio_x_bola+5,posicio_y_bola,mida_x_bola,mida_y_bola);
 			}
@@ -93,7 +93,7 @@ $(document).on('deviceready',
 		ctx.stroke();
 	}
 	
-	function pausecomp(ms)
+	function sleep(ms)
 	{
 		ms += new Date().getTime();
 		while (new Date() < ms){}
